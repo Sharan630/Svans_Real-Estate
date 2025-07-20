@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    { "src": "Svans/index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/Svans/index.html" }
+  ]
+} 
