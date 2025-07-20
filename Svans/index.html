@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Svans Realty | Luxury Villas Hyderabad</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;400;500&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Removed old conflicting <style> block -->
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
+  <!-- Social Bar -->
+  <div class="social-bar">
+    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" alt="Svans Realty Logo">
+        <span class="brand-name">Svans Realty</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#services">Luxury Sales</a></li>
+              <li><a class="dropdown-item" href="#services">Branding</a></li>
+              <li><a class="dropdown-item" href="#services">Networking</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#" class="download-btn ms-lg-4"><i class="fa fa-download me-2"></i>Download Brochure</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section d-flex align-items-end justify-content-center" style="background: linear-gradient(rgba(19,51,102,0.7),rgba(19,51,102,0.7)), url('https://assetmonk.com/wp-content/uploads/shutterstock_177153641-min-min-min-1.jpg') center/cover no-repeat;">
+    <div class="hero-content w-100">
+      <h1 class="hero-title" data-aos="fade-up">HYDERABAD</h1>
+      <div class="hero-hashtags" data-aos="fade-up" data-aos-delay="200">
+        <span>#IKIGAI</span>
+        <span>#KAIZEN</span>
+        <span>#MERAKI</span>
+      </div>
+      <!-- Association Logos -->
+      <div class="association-logos">
+        
+        <a href="https://1000logos.net/wp-content/uploads/2017/10/MLS-Realtor-Logo.png" target="_blank" rel="noopener">
+          <img src="https://1000logos.net/wp-content/uploads/2017/10/MLS-Realtor-Logo.png" alt="MLS Realtor Logo" title="MLS Realtor" style="height:98px; background:#fff; border-radius:12px; box-shadow:0 2px 8px rgba(19,51,102,0.10); padding:0.3rem 0.7rem;">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-6 about-content" data-aos="fade-right">
+          <div class="about-section-title"><i class="fas fa-star about-icon"></i> ABOUT US</div>
+          <h2>Svans Realty</h2>
+          <ul class="about-list list-unstyled">
+            <li><i class="fas fa-gem about-icon"></i> <b>Expertise:</b> Luxury Residential Villas in Hyderabad</li>
+            <li><i class="fas fa-handshake about-icon"></i> <b>Reputation:</b> Integrity, Exceptional Service, and Client Empowerment</li>
+            <li><i class="fas fa-map-marker-alt about-icon"></i> <b>Prime Locations:</b> Financial District, Gachibowli, HI-TEC City & more</li>
+          </ul>
+          <div class="about-section-title"><i class="fas fa-briefcase about-icon"></i> WHAT WE DO</div>
+          <p>We transform premium real estate experiences for our clients by offering a curated portfolio of luxury villas, expert guidance, and a seamless journey from search to sale. Our deep market knowledge and commitment to integrity empower you to make the best real estate decisions in Hyderabad's most sought-after locations.</p>
+          <div class="about-contact">Let's connect to elevate your luxury real estate journey.<br><a href="#contact">Contact Us &rarr;</a></div>
+          <div class="about-signature">Luxury Sales Mentor</div>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Svans Realty" class="about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Banner Section -->
+  <div class="marquee-container">
+    <div class="marquee">
+      <span>
+        ✦ RERA Registered ✦ Concierge to Iconic Realty Brands ✦ Luxury Villas Hyderabad ✦ Expert Guidance ✦ Prime Locations ✦ Trusted Advisor ✦ Elite Networking ✦ Brand Building ✦ Personalized Service ✦ Integrity & Excellence
+      </span>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card service-card h-100 text-center p-4">
+            <div class="service-icon mb-3"><i class="fas fa-gem"></i></div>
+            <h5 class="card-title">Luxury Sales Mentorship</h5>
+            <p class="card-text">Personalized coaching to master the nuances of high-value real estate sales and negotiations.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card service-card h-100 text-center p-4">
+            <div class="service-icon mb-3"><i class="fas fa-briefcase"></i></div>
+            <h5 class="card-title">Brand Building</h5>
+            <p class="card-text">Strategies to position yourself as a trusted luxury real estate advisor and grow your personal brand.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card service-card h-100 text-center p-4">
+            <div class="service-icon mb-3"><i class="fas fa-network-wired"></i></div>
+            <h5 class="card-title">Elite Networking</h5>
+            <p class="card-text">Access to exclusive events and introductions to high-net-worth individuals and industry leaders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Portfolio</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Project 1" class="portfolio-img">
+            <div class="p-3">
+              <h5>Skyline Residences</h5>
+              <p>Closed a record-breaking penthouse deal in Hyderabad's most prestigious address.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" alt="Project 2" class="portfolio-img">
+            <div class="p-3">
+              <h5>Elite Villas</h5>
+              <p>Guided a client to acquire a luxury villa, setting a new benchmark for personalized service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="Project 3" class="portfolio-img">
+            <div class="p-3">
+              <h5>Signature Towers</h5>
+              <p>Helped a developer launch and sell out a premium high-rise project in record time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Testimonials</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial-card mx-auto" style="max-width: 500px;">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1" class="testimonial-img">
+              <p class="mb-2">“The mentorship transformed my approach to luxury sales. I closed my biggest deal within 3 months!”</p>
+              <h6 class="mb-0">Rahul S.</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card mx-auto" style="max-width: 500px;">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 2" class="testimonial-img">
+              <p class="mb-2">“The network and strategies I gained are priceless. Highly recommended for ambitious realtors.”</p>
+              <h6 class="mb-0">Priya M.</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card mx-auto" style="max-width: 500px;">
+              <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Client 3" class="testimonial-img">
+              <p class="mb-2">“A true mentor who delivers results. My brand and income have grown exponentially.”</p>
+              <h6 class="mb-0">Amit K.</h6>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Latest Blog</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card blog-card h-100">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog 1">
+            <div class="card-body">
+              <h5 class="card-title">5 Secrets to Closing Luxury Deals</h5>
+              <p class="card-text"><small class="text-muted">April 2024</small></p>
+              <p class="card-text">Discover the proven techniques top agents use to win high-ticket clients and close record deals.</p>
+              <a href="#" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card blog-card h-100">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog 2">
+            <div class="card-body">
+              <h5 class="card-title">Branding for Real Estate Success</h5>
+              <p class="card-text"><small class="text-muted">March 2024</small></p>
+              <p class="card-text">How to build a magnetic personal brand that attracts luxury clients and opportunities.</p>
+              <a href="#" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card blog-card h-100">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog 3">
+            <div class="card-body">
+              <h5 class="card-title">Networking with the Elite</h5>
+              <p class="card-text"><small class="text-muted">February 2024</small></p>
+              <p class="card-text">Unlock the doors to exclusive circles and learn how to connect with high-net-worth individuals.</p>
+              <a href="#" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container" data-aos="zoom-in">
+      <h2>Ready to Elevate Your Real Estate Career?</h2>
+      <a href="https://wa.me/919999999999" target="_blank" class="btn btn-lg">Schedule Your Appointment</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="phone" required pattern="[0-9]{10,15}">
+              <div class="invalid-feedback">Please enter a valid phone number.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" required></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <button type="submit" class="btn btn-gold">Send Message</button>
+          </form>
+        </div>
+        <div class="col-lg-5 d-flex align-items-center justify-content-center" data-aos="fade-left">
+          <img src="https://maps.googleapis.com/maps/api/staticmap?center=Hyderabad,India&zoom=12&size=400x250&key=YOUR_API_KEY" alt="Map" class="img-fluid rounded shadow" style="max-width: 400px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-modern mt-5">
+    <div class="footer-main">
+      <div class="footer-left">
+        <a href="#contact" class="footer-link discuss-link">Reach out to discuss your next project</a>
+        <div class="footer-section">
+          <div class="footer-label">STAY UP TO DATE</div>
+          <div class="footer-contact"><i class="fas fa-phone-alt"></i> <a href="tel:+919885420885">+91 98854 20885</a></div>
+          <div class="footer-contact"><i class="fas fa-envelope"></i> <a href="mailto:connect@svansrealty.com">connect@svansrealty.com</a></div>
+        </div>
+        <div class="footer-section">
+          <div class="footer-label">ADDRESS</div>
+          <div class="footer-address">Plot no.68, Senore Colony, Veterinary Colony, Ambedkar Nagar, Shaikpet, Hyderabad, Telangana 500008</div>
+        </div>
+       
+        <div class="footer-social-links">
+          <div><a href="#">Facebook <span class="arrow">&rarr;</span></a></div>
+          <div><a href="#">Twitter <span class="arrow">&rarr;</span></a></div>
+          <div><a href="#">Instagram <span class="arrow">&rarr;</span></a></div>
+          <div><a href="#">LinkedIn <span class="arrow">&rarr;</span></a></div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-logo">Svans Realty</div>
+        <div class="footer-location">Hyderabad, India</div>
+        <div class="footer-policies">
+          <a href="#terms">Terms & Conditions</a> /
+          <a href="#privacy">Privacy Policy</a> /
+          <a href="#refund">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">&copy; 2024 Svans Realty. All rights reserved.</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919999999999" class="fab-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('mainNavbar');
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    // Bootstrap form validation
+    (() => {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+    // AOS init
+    AOS.init({ once: true, duration: 900 });
+  </script>
+</body>
+</html> 
