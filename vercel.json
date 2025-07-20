@@ -5,6 +5,7 @@
     { "src": "Svans/index.html", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/(style\\.css|assets/.*)", "dest": "/Svans/$1" },
     { "src": "/(.*)", "dest": "/Svans/index.html" }
   ]
 } 
