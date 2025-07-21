@@ -130,12 +130,17 @@ body {
 /* Social Bar */
 .social-bar {
   position: fixed;
-  top: 32vh;
-  left: 2.2vw;
-  z-index: 1001;
+  top: 80px;
+  left: 0;
+  z-index: 1050;
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   gap: 1.1rem;
+  width: 44px;
+  background: none;
+  border-radius: 0 1.2rem 1.2rem 0;
+  box-shadow: none;
+  align-items: center;
 }
 .social-bar a {
   background: var(--primary-blue);
@@ -149,6 +154,7 @@ body {
   font-size: 1.3rem;
   box-shadow: 0 2px 8px rgba(19,51,102,0.13);
   transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin: 0;
 }
 .social-bar a:hover {
   background: #ffd700;
@@ -214,23 +220,19 @@ h2::after {
   }
   /* Social bar always vertical, fixed to far left, not bottom */
   .social-bar {
-    position: fixed;
-    top: 80px;
+    top: 70px;
     left: 0;
-    bottom: unset;
-    flex-direction: column;
+    flex-direction: column !important;
     gap: 0.7rem;
-    z-index: 1050;
     width: 44px;
-    background: none;
-    border-radius: 0 1.2rem 1.2rem 0;
-    box-shadow: none;
+    align-items: center;
+    margin-top: 4px;
   }
   .social-bar a {
-    margin: 0;
     width: 44px;
     height: 44px;
     font-size: 1.2rem;
+    margin: 0;
   }
   /* Brochure button always visible below navbar */
   .download-btn {
@@ -259,20 +261,20 @@ h2::after {
     display: none !important;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 480px) {
   .social-bar {
-    top: unset;
-    bottom: 10vh;
-    left: 1vw;
-    flex-direction: row;
-    gap: 0.7rem;
+    top: 64px;
+    left: 0;
+    gap: 0.5rem;
+    width: 38px;
+    margin-top: 2px;
   }
-  .association-logos {
-    right: 1vw;
-    bottom: 1vh;
-    gap: 0.7rem;
+  .social-bar a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
   }
-} 
+}
 
 .brand-name {
   color: #fff;
