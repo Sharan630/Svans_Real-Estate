@@ -578,3 +578,95 @@ h2::after {
     font-size: 1.3rem;
   }
 } 
+
+@media (max-width: 480px) {
+  .navbar-brand img {
+    height: 38px !important;
+    margin-right: 10px;
+  }
+  .brand-name {
+    font-size: 1.2rem;
+    margin-left: 8px;
+  }
+  .download-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+  }
+  .hero-title {
+    font-size: 1.3rem;
+    padding: 0 0.2rem;
+  }
+  .hero-content {
+    padding-bottom: 2rem;
+  }
+  .hero-hashtags {
+    gap: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .association-logos img {
+    height: 18px;
+    padding: 0.1rem 0.3rem;
+  }
+  .about-section {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .about-content h2 {
+    font-size: 1.1rem;
+  }
+  .about-content .about-list li {
+    font-size: 0.9rem;
+  }
+  .about-img {
+    min-height: 90px;
+    max-width: 98vw;
+  }
+  .marquee {
+    height: 32px;
+  }
+  .marquee span {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+  .service-card, .portfolio-item, .testimonial-card, .blog-card, .contact-section form {
+    border-radius: 0.7rem;
+    padding: 1rem 0.5rem;
+  }
+  .service-card h5, .portfolio-item h5, .blog-card h5 {
+    font-size: 1rem;
+  }
+  .portfolio-img, .testimonial-img, .blog-card .card-img-top {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.7rem;
+  }
+  .footer-main {
+    flex-direction: column;
+    padding: 18px 2vw 8px 2vw;
+    gap: 0.7rem;
+  }
+  .footer-logo {
+    font-size: 1rem;
+  }
+  .footer-location, .footer-policies, .footer-label, .footer-contact, .footer-address {
+    font-size: 0.85rem;
+  }
+  .footer-social-links {
+    gap: 0.5rem 1rem;
+  }
+  .fab-whatsapp {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    bottom: 12px;
+    right: 12px;
+  }
+  .btn, .btn-lg, .btn-gold {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.2rem;
+  }
+  .contact-section .form-label, .contact-section input, .contact-section textarea {
+    font-size: 0.95rem;
+  }
+} 
