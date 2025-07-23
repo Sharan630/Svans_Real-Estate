@@ -641,51 +641,93 @@ h2::after {
   }
 } 
 
-/* --- Portfolio Slider Improved Styles --- */
+/* --- Portfolio Slider Enhanced Styles --- */
 .portfolio-slider {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
+  max-width: 760px;
+  margin: 0 auto 2.5rem auto;
   overflow: hidden;
   position: relative;
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(19,51,102,0.10);
-  padding: 32px 24px 24px 24px;
-  min-height: 320px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(19,51,102,0.13);
+  padding: 40px 32px 40px 32px;
+  min-height: 380px;
   display: flex;
   align-items: center;
 }
 .portfolio-track {
   display: flex;
-  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transition: transform 0.7s cubic-bezier(.4,2,.6,1);
   will-change: transform;
   width: 100%;
+  gap: 32px;
 }
 .portfolio-track .pdf-card {
-  min-width: 50%;
-  max-width: 50%;
-  flex: 0 0 50%;
+  min-width: 48%;
+  max-width: 48%;
+  flex: 0 0 48%;
   margin: 0;
   box-sizing: border-box;
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 0 12px;
+  background: #f8fafc;
+  box-shadow: 0 4px 24px rgba(19,51,102,0.10);
+  border-radius: 18px;
+  padding: 32px 18px 24px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: box-shadow 0.25s, transform 0.25s;
+  position: relative;
 }
-@media (max-width: 700px) {
+.portfolio-track .pdf-card:hover {
+  box-shadow: 0 12px 36px rgba(19,51,102,0.18);
+  transform: translateY(-8px) scale(1.03);
+  z-index: 2;
+}
+.portfolio-track .pdf-thumbnail {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  background: #e9eef6;
+  box-shadow: 0 2px 8px rgba(19,51,102,0.08);
+}
+.portfolio-track .pdf-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #133366;
+  text-align: center;
+  margin-bottom: 0.6rem;
+  word-break: break-all;
+}
+.portfolio-track .pdf-open {
+  color: #d32f2f;
+  font-size: 1.15rem;
+  margin-top: 0.3rem;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+.portfolio-track .pdf-card:hover .pdf-open {
+  color: #a31515;
+}
+@media (max-width: 900px) {
   .portfolio-slider {
     max-width: 98vw;
     padding: 18px 2vw 18px 2vw;
     min-height: 0;
   }
+  .portfolio-track {
+    gap: 16px;
+  }
   .portfolio-track .pdf-card {
     min-width: 100%;
     max-width: 100%;
     flex: 0 0 100%;
-    padding: 0 4px;
+    padding: 24px 8px 18px 8px;
+  }
+  .portfolio-track .pdf-thumbnail {
+    width: 90px;
+    height: 120px;
   }
 } 
