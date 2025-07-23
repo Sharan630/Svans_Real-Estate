@@ -15,6 +15,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/style.css">
   
+  <!-- Removed old conflicting <style> block -->
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
   <!-- Social Bar -->
@@ -132,62 +133,45 @@
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio-section">
-    <div class="portfolio-header" style="text-align:center; margin-bottom:2rem;">
-      <h2>Portfolio</h2>
-    </div>
-    <button class="slider-arrow left" aria-label="Previous">&#8592;</button>
-    <div class="portfolio-slider">
-      <div class="portfolio-track">
+    <div class="container">
+      <div class="portfolio-header" style="text-align:center; margin-bottom:2rem;">
+        <h2>Portfolio</h2>
+        
+      </div>
+      <!-- PDF Slider for Portfolio -->
+      <div id="pdfList" class="pdf-slider-container">
         <div class="pdf-card" onclick="window.open('assets/pdfs/SageBrochure_web.pdf','_blank')">
           <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Luxury Villa">
-          <div class="pdf-info">
-            <div class="pdf-title">SageBrochure_web.pdf</div>
-            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-          </div>
+          <div class="pdf-title">SageBrochure_web.pdf</div>
+          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
         </div>
         <div class="pdf-card" onclick="window.open('assets/pdfs/Villa Living.pdf','_blank')">
           <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=400&q=80" alt="Modern Mansion">
-          <div class="pdf-info">
-            <div class="pdf-title">Villa Living.pdf</div>
-            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-          </div>
+          <div class="pdf-title">Villa Living.pdf</div>
+          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
         </div>
         <div class="pdf-card" onclick="window.open('assets/pdfs/The Promenade.pdf','_blank')">
           <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Luxury Apartment">
-          <div class="pdf-info">
-            <div class="pdf-title">The Promenade.pdf</div>
-            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-          </div>
+          <div class="pdf-title">The Promenade.pdf</div>
+          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
         </div>
         <div class="pdf-card" onclick="window.open('assets/pdfs/SAS_Crown_Handy_Brochure__4_ (1).pdf','_blank')">
           <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80" alt="Luxury Tower">
-          <div class="pdf-info">
-            <div class="pdf-title">SAS_Crown_Handy_Brochure__4_ (1).pdf</div>
-            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-          </div>
+          <div class="pdf-title">SAS_Crown_Handy_Brochure__4_ (1).pdf</div>
+          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
         </div>
         <div class="pdf-card" onclick="window.open('assets/pdfs/Rainbow Waters.pdf','_blank')">
           <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Luxury Pool Villa">
-          <div class="pdf-info">
-            <div class="pdf-title">Rainbow Waters.pdf</div>
-            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-          </div>
+          <div class="pdf-title">Rainbow Waters.pdf</div>
+          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
         </div>
         <div class="pdf-card" onclick="window.open('assets/pdfs/Urrban League Riverscape Brochure.pdf','_blank')">
           <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Luxury Riverside">
-          <div class="pdf-info">
-            <div class="pdf-title">Urrban League Riverscape Brochure.pdf</div>
-            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-          </div>
+          <div class="pdf-title">Urrban League Riverscape Brochure.pdf</div>
+          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
         </div>
       </div>
-      <div class="portfolio-dots">
-        <div class="portfolio-dot active"></div>
-        <div class="portfolio-dot"></div>
-        <div class="portfolio-dot"></div>
-      </div>
     </div>
-    <button class="slider-arrow right" aria-label="Next">&#8594;</button>
   </section>
 
   <!-- Testimonials Section -->
@@ -392,84 +376,4 @@
     AOS.init({ once: true, duration: 900 });
   </script>
 </body>
-<script>
-(function() {
-  const track = document.querySelector('.portfolio-track');
-  const cards = document.querySelectorAll('.portfolio-track .pdf-card');
-  const leftArrow = document.querySelector('.slider-arrow.left');
-  const rightArrow = document.querySelector('.slider-arrow.right');
-  const dots = document.querySelectorAll('.portfolio-dot');
-  let cardsPerView = window.innerWidth <= 900 ? 1 : 2;
-  let currentIndex = 0;
-
-  function updateCardsPerView() {
-    cardsPerView = window.innerWidth <= 900 ? 1 : 2;
-  }
-
-  function getMaxIndex() {
-    // Last possible index to show a full set of cards
-    return Math.max(0, Math.ceil(cards.length / cardsPerView) - 1);
-  }
-
-  function updateSlider() {
-    // Clamp currentIndex
-    const maxIndex = getMaxIndex();
-    if (currentIndex > maxIndex) currentIndex = 0;
-    if (currentIndex < 0) currentIndex = maxIndex;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    // Update dots
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-  }
-
-  function slideNext() {
-    const maxIndex = getMaxIndex();
-    if (currentIndex >= maxIndex) {
-      currentIndex = 0;
-    } else {
-      currentIndex++;
-    }
-    updateSlider();
-  }
-
-  function slidePrev() {
-    const maxIndex = getMaxIndex();
-    if (currentIndex === 0) {
-      currentIndex = maxIndex;
-    } else {
-      currentIndex--;
-    }
-    updateSlider();
-  }
-
-  leftArrow.addEventListener('click', function() {
-    slidePrev();
-  });
-  rightArrow.addEventListener('click', function() {
-    slideNext();
-  });
-
-  window.addEventListener('resize', function() {
-    updateCardsPerView();
-    currentIndex = 0;
-    updateSlider();
-  });
-
-  // Set up initial widths for cards and track
-  function setCardWidths() {
-    updateCardsPerView();
-    const totalSlides = Math.ceil(cards.length / cardsPerView);
-    track.style.width = `${totalSlides * 100}%`;
-    cards.forEach(card => {
-      card.style.width = `${100 / (cardsPerView * totalSlides)}%`;
-    });
-  }
-
-  setCardWidths();
-  currentIndex = 0;
-  updateSlider();
-
-  window.addEventListener('resize', setCardWidths);
-})();
-</script>
 </html> 
