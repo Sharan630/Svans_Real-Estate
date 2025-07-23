@@ -641,18 +641,18 @@ h2::after {
   }
 } 
 
-/* --- Portfolio Slider Enhanced Styles --- */
+/* --- Portfolio Slider Final Enhanced Styles --- */
 .portfolio-slider {
   width: 100%;
-  max-width: 760px;
+  max-width: 950px;
   margin: 0 auto 2.5rem auto;
   overflow: hidden;
   position: relative;
   background: #fff;
-  border-radius: 24px;
+  border-radius: 28px;
   box-shadow: 0 8px 32px rgba(19,51,102,0.13);
-  padding: 40px 32px 40px 32px;
-  min-height: 380px;
+  padding: 36px 18px 36px 18px;
+  min-height: 440px;
   display: flex;
   align-items: center;
 }
@@ -661,23 +661,24 @@ h2::after {
   transition: transform 0.7s cubic-bezier(.4,2,.6,1);
   will-change: transform;
   width: 100%;
-  gap: 32px;
+  gap: 24px;
 }
 .portfolio-track .pdf-card {
-  min-width: 48%;
-  max-width: 48%;
-  flex: 0 0 48%;
+  min-width: 47%;
+  max-width: 47%;
+  flex: 0 0 47%;
   margin: 0;
   box-sizing: border-box;
   background: #f8fafc;
   box-shadow: 0 4px 24px rgba(19,51,102,0.10);
-  border-radius: 18px;
-  padding: 32px 18px 24px 18px;
+  border-radius: 20px;
+  padding: 38px 18px 28px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.25s, transform 0.25s;
   position: relative;
+  height: 320px;
 }
 .portfolio-track .pdf-card:hover {
   box-shadow: 0 12px 36px rgba(19,51,102,0.18);
@@ -685,16 +686,16 @@ h2::after {
   z-index: 2;
 }
 .portfolio-track .pdf-thumbnail {
-  width: 120px;
-  height: 170px;
+  width: 160px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 1.2rem;
   background: #e9eef6;
   box-shadow: 0 2px 8px rgba(19,51,102,0.08);
 }
 .portfolio-track .pdf-title {
-  font-size: 1.13rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: #133366;
   text-align: center;
@@ -703,7 +704,7 @@ h2::after {
 }
 .portfolio-track .pdf-open {
   color: #d32f2f;
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   margin-top: 0.3rem;
   transition: color 0.2s;
   font-weight: 500;
@@ -711,23 +712,24 @@ h2::after {
 .portfolio-track .pdf-card:hover .pdf-open {
   color: #a31515;
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .portfolio-slider {
     max-width: 98vw;
     padding: 18px 2vw 18px 2vw;
     min-height: 0;
   }
   .portfolio-track {
-    gap: 16px;
+    gap: 12px;
   }
   .portfolio-track .pdf-card {
     min-width: 100%;
     max-width: 100%;
     flex: 0 0 100%;
     padding: 24px 8px 18px 8px;
+    height: auto;
   }
   .portfolio-track .pdf-thumbnail {
-    width: 90px;
-    height: 120px;
+    width: 110px;
+    height: 150px;
   }
 } 
