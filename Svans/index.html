@@ -401,40 +401,43 @@
   const dots = document.querySelectorAll('.portfolio-dot');
   let cardsPerView = window.innerWidth <= 900 ? 1 : 2;
   let currentIndex = 0;
-  let maxIndex = Math.max(0, cards.length - cardsPerView);
 
   function updateCardsPerView() {
     cardsPerView = window.innerWidth <= 900 ? 1 : 2;
-    maxIndex = Math.max(0, cards.length - cardsPerView);
+  }
+
+  function getMaxIndex() {
+    // Last possible index to show a full set of cards
+    return Math.max(0, Math.ceil(cards.length / cardsPerView) - 1);
   }
 
   function updateSlider() {
     // Clamp currentIndex
+    const maxIndex = getMaxIndex();
     if (currentIndex > maxIndex) currentIndex = 0;
     if (currentIndex < 0) currentIndex = maxIndex;
-    track.style.transform = `translateX(-${(100 / cardsPerView) * currentIndex}%)`;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
     // Update dots
     dots.forEach(dot => dot.classList.remove('active'));
-    const dotIndex = Math.floor(currentIndex / cardsPerView);
-    if (dots[dotIndex]) dots[dotIndex].classList.add('active');
+    if (dots[currentIndex]) dots[currentIndex].classList.add('active');
   }
 
   function slideNext() {
+    const maxIndex = getMaxIndex();
     if (currentIndex >= maxIndex) {
       currentIndex = 0;
     } else {
-      currentIndex += cardsPerView;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      currentIndex++;
     }
     updateSlider();
   }
 
   function slidePrev() {
+    const maxIndex = getMaxIndex();
     if (currentIndex === 0) {
       currentIndex = maxIndex;
     } else {
-      currentIndex -= cardsPerView;
-      if (currentIndex < 0) currentIndex = 0;
+      currentIndex--;
     }
     updateSlider();
   }
@@ -452,10 +455,21 @@
     updateSlider();
   });
 
-  // Always start at first PDF
-  updateCardsPerView();
+  // Set up initial widths for cards and track
+  function setCardWidths() {
+    updateCardsPerView();
+    const totalSlides = Math.ceil(cards.length / cardsPerView);
+    track.style.width = `${totalSlides * 100}%`;
+    cards.forEach(card => {
+      card.style.width = `${100 / (cardsPerView * totalSlides)}%`;
+    });
+  }
+
+  setCardWidths();
   currentIndex = 0;
   updateSlider();
+
+  window.addEventListener('resize', setCardWidths);
 })();
 </script>
 </html> 
