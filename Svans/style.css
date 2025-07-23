@@ -670,14 +670,14 @@ h2::after {
   transition: transform 0.8s cubic-bezier(.4,2,.6,1);
   will-change: transform;
   width: 100%;
-  gap: min(3vw, 32px);
+  gap: min(4vw, 48px);
   justify-content: center;
   align-items: center;
 }
 .portfolio-track .pdf-card {
-  min-width: 48%;
-  max-width: 48%;
-  flex: 0 0 48%;
+  min-width: 40%;
+  max-width: 40%;
+  flex: 0 0 40%;
   margin: 0;
   box-sizing: border-box;
   background: rgba(255,255,255,0.75);
@@ -764,9 +764,9 @@ h2::after {
     max-width: 98vw;
   }
   .portfolio-track .pdf-card {
-    min-width: 48%;
-    max-width: 48%;
-    flex: 0 0 48%;
+    min-width: 44%;
+    max-width: 44%;
+    flex: 0 0 44%;
     padding: 32px 10px 24px 10px;
     height: 320px;
   }
