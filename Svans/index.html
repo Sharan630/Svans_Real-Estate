@@ -401,12 +401,17 @@
   const dots = document.querySelectorAll('.portfolio-dot');
   let cardsPerView = window.innerWidth <= 900 ? 1 : 2;
   let currentIndex = 0;
+  let maxIndex = Math.max(0, cards.length - cardsPerView);
 
   function updateCardsPerView() {
     cardsPerView = window.innerWidth <= 900 ? 1 : 2;
+    maxIndex = Math.max(0, cards.length - cardsPerView);
   }
 
   function updateSlider() {
+    // Clamp currentIndex
+    if (currentIndex > maxIndex) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = maxIndex;
     track.style.transform = `translateX(-${(100 / cardsPerView) * currentIndex}%)`;
     // Update dots
     dots.forEach(dot => dot.classList.remove('active'));
@@ -415,19 +420,18 @@
   }
 
   function slideNext() {
-    if (currentIndex + cardsPerView >= cards.length) {
-      currentIndex = 0; // Loop to first
+    if (currentIndex >= maxIndex) {
+      currentIndex = 0;
     } else {
       currentIndex += cardsPerView;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
     }
     updateSlider();
   }
 
   function slidePrev() {
     if (currentIndex === 0) {
-      // Loop to last full set
-      currentIndex = cards.length - cardsPerView;
-      if (currentIndex < 0) currentIndex = 0;
+      currentIndex = maxIndex;
     } else {
       currentIndex -= cardsPerView;
       if (currentIndex < 0) currentIndex = 0;
@@ -444,14 +448,13 @@
 
   window.addEventListener('resize', function() {
     updateCardsPerView();
-    // Always snap to first card on resize
     currentIndex = 0;
     updateSlider();
   });
 
   // Always start at first PDF
-  currentIndex = 0;
   updateCardsPerView();
+  currentIndex = 0;
   updateSlider();
 })();
 </script>

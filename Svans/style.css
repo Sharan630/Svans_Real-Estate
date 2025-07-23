@@ -640,6 +640,7 @@ h2::after {
   }
 } 
 
+/* Cleaned up Portfolio Slider Styles */
 .slider-arrow {
   position: absolute;
   top: 50%;
@@ -659,19 +660,13 @@ h2::after {
   cursor: pointer;
   transition: box-shadow 0.2s, background 0.2s;
 }
-.slider-arrow.left {
-  left: 16px;
-}
-.slider-arrow.right {
-  right: 16px;
-}
+.slider-arrow.left { left: 16px; }
+.slider-arrow.right { right: 16px; }
 .slider-arrow:hover {
   background: #e3eafc;
   box-shadow: 0 4px 24px rgba(19,51,102,0.18);
 }
-.portfolio-section {
-  position: relative;
-}
+.portfolio-section { position: relative; }
 .portfolio-slider {
   position: relative;
   max-width: 1100px;
@@ -745,69 +740,29 @@ h2::after {
   transition: color 0.2s;
   font-weight: 500;
 }
-.pdf-card:hover .pdf-open {
-  color: #a31515;
-}
+.pdf-card:hover .pdf-open { color: #a31515; }
 @media (max-width: 1200px) {
-  .portfolio-slider {
-    max-width: 98vw;
-    padding: 0 2vw;
-  }
-  .portfolio-header {
-    max-width: 98vw;
-  }
+  .portfolio-slider { max-width: 98vw; padding: 0 2vw; }
+  .portfolio-header { max-width: 98vw; }
   .portfolio-track .pdf-card, .pdf-card {
-    min-width: 44%;
-    max-width: 44%;
-    flex: 0 0 44%;
-    height: 320px;
+    min-width: 44%; max-width: 44%; flex: 0 0 44%; height: 320px;
   }
-  .pdf-thumbnail {
-    height: 150px;
-  }
+  .pdf-thumbnail { height: 150px; }
 }
 @media (max-width: 900px) {
-  .slider-arrow.left {
-    left: 2px;
-  }
-  .slider-arrow.right {
-    right: 2px;
-  }
-  .portfolio-slider {
-    padding: 0 1vw;
-  }
-  .portfolio-track {
-    gap: 8px;
-  }
+  .slider-arrow.left { left: 2px; }
+  .slider-arrow.right { right: 2px; }
+  .portfolio-slider { padding: 0 1vw; }
+  .portfolio-track { gap: 8px; }
   .portfolio-track .pdf-card, .pdf-card {
-    min-width: 100%;
-    max-width: 100%;
-    flex: 0 0 100%;
-    height: auto;
+    min-width: 100%; max-width: 100%; flex: 0 0 100%; height: auto;
   }
-  .pdf-thumbnail {
-    height: 120px;
-  }
+  .pdf-thumbnail { height: 120px; }
 }
 @media (max-width: 600px) {
-  .slider-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 1.3rem;
-  }
-  .portfolio-slider {
-    padding: 0;
-    border-radius: 12px;
-  }
-  .portfolio-header {
-    max-width: 100vw;
-  }
-  .portfolio-track .pdf-card, .pdf-card {
-    border-radius: 10px;
-    padding: 0 0 10px 0;
-  }
-  .pdf-thumbnail {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
+  .slider-arrow { width: 36px; height: 36px; font-size: 1.3rem; }
+  .portfolio-slider { padding: 0; border-radius: 12px; }
+  .portfolio-header { max-width: 100vw; }
+  .portfolio-track .pdf-card, .pdf-card { border-radius: 10px; padding: 0 0 10px 0; }
+  .pdf-thumbnail { border-top-left-radius: 10px; border-top-right-radius: 10px; }
 } 
