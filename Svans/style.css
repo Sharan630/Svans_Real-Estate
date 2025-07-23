@@ -641,32 +641,51 @@ h2::after {
   }
 } 
 
-/* Portfolio Slider Styles */
+/* --- Portfolio Slider Improved Styles --- */
 .portfolio-slider {
   width: 100%;
-  max-width: 520px;
+  max-width: 600px;
   margin: 0 auto 2rem auto;
   overflow: hidden;
   position: relative;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(19,51,102,0.10);
+  padding: 32px 24px 24px 24px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
 }
 .portfolio-track {
   display: flex;
   transition: transform 0.6s cubic-bezier(.4,2,.6,1);
   will-change: transform;
+  width: 100%;
 }
 .portfolio-track .pdf-card {
   min-width: 50%;
   max-width: 50%;
   flex: 0 0 50%;
-  margin-right: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (max-width: 700px) {
   .portfolio-slider {
     max-width: 98vw;
+    padding: 18px 2vw 18px 2vw;
+    min-height: 0;
   }
   .portfolio-track .pdf-card {
     min-width: 100%;
     max-width: 100%;
     flex: 0 0 100%;
+    padding: 0 4px;
   }
 } 

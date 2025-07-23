@@ -383,18 +383,26 @@
 (function() {
   const track = document.querySelector('.portfolio-track');
   const cards = document.querySelectorAll('.portfolio-track .pdf-card');
-  const cardsPerView = 2;
+  const cardsPerView = window.innerWidth <= 700 ? 1 : 2;
   let currentIndex = 0;
-  function slidePortfolio() {
-    currentIndex += cardsPerView;
-    if (currentIndex >= cards.length) currentIndex = 0;
-    track.style.transform = `translateX(-${currentIndex * (100 / cardsPerView)}%)`;
+
+  function setWidths() {
+    const perView = window.innerWidth <= 700 ? 1 : 2;
+    track.style.width = `${(cards.length / perView) * 100}%`;
+    cards.forEach(card => {
+      card.style.width = `${100 / cards.length}%`;
+    });
   }
-  // Set widths for smooth sliding
-  track.style.width = `${(cards.length / cardsPerView) * 100}%`;
-  cards.forEach(card => {
-    card.style.width = `${100 / cards.length}%`;
-  });
+
+  function slidePortfolio() {
+    const perView = window.innerWidth <= 700 ? 1 : 2;
+    currentIndex += perView;
+    if (currentIndex >= cards.length) currentIndex = 0;
+    track.style.transform = `translateX(-${(100 / perView) * currentIndex}%)`;
+  }
+
+  setWidths();
+  window.addEventListener('resize', setWidths);
   setInterval(slidePortfolio, 4000);
 })();
 </script>
