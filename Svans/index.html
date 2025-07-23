@@ -134,33 +134,39 @@
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio-section">
     <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-up">Portfolio</h2>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Project 1" class="portfolio-img">
-            <div class="p-3">
-              <h5>Skyline Residences</h5>
-              <p>Closed a record-breaking penthouse deal in Hyderabad's most prestigious address.</p>
-            </div>
+      <div class="portfolio-header" style="text-align:center; margin-bottom:2rem;">
+        <h2>Portfolio</h2>
+        <div class="pdf-upload-animate" style="animation: slideDown 1s ease; background: #f8f9fa; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 12px rgba(19,51,102,0.08); display: flex; flex-direction: column; align-items: center;">
+          <div style="font-size:2rem; color:#133366; margin-bottom:1rem;">
+            <i class="fas fa-file-pdf"></i>
           </div>
+          <label for="pdfUpload" style="font-weight:500; margin-bottom:0.5rem;">Upload your Portfolio PDFs</label>
+          <input type="file" id="pdfUpload" accept="application/pdf" style="margin-bottom:1rem;" />
+          <div style="font-size:0.95rem; color:#888;">(PDFs will appear below after upload)</div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" alt="Project 2" class="portfolio-img">
-            <div class="p-3">
-              <h5>Elite Villas</h5>
-              <p>Guided a client to acquire a luxury villa, setting a new benchmark for personalized service.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="Project 3" class="portfolio-img">
-            <div class="p-3">
-              <h5>Signature Towers</h5>
-              <p>Helped a developer launch and sell out a premium high-rise project in record time.</p>
-            </div>
+      </div>
+      <!-- Placeholder for displaying uploaded PDFs -->
+      <div id="pdfList" class="row justify-content-center">
+        <div class="col-12">
+          <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action d-flex align-items-center" href="assets/pdfs/SageBrochure_web.pdf" target="_blank">
+              <i class="fas fa-file-pdf me-2" style="color:#d32f2f; font-size:1.5rem;"></i> SageBrochure_web.pdf
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center" href="assets/pdfs/Villa Living.pdf" target="_blank">
+              <i class="fas fa-file-pdf me-2" style="color:#d32f2f; font-size:1.5rem;"></i> Villa Living.pdf
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center" href="assets/pdfs/The Promenade.pdf" target="_blank">
+              <i class="fas fa-file-pdf me-2" style="color:#d32f2f; font-size:1.5rem;"></i> The Promenade.pdf
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center" href="assets/pdfs/SAS_Crown_Handy_Brochure__4_ (1).pdf" target="_blank">
+              <i class="fas fa-file-pdf me-2" style="color:#d32f2f; font-size:1.5rem;"></i> SAS_Crown_Handy_Brochure__4_ (1).pdf
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center" href="assets/pdfs/Rainbow Waters.pdf" target="_blank">
+              <i class="fas fa-file-pdf me-2" style="color:#d32f2f; font-size:1.5rem;"></i> Rainbow Waters.pdf
+            </a>
+            <a class="list-group-item list-group-item-action d-flex align-items-center" href="assets/pdfs/Urrban League Riverscape Brochure.pdf" target="_blank">
+              <i class="fas fa-file-pdf me-2" style="color:#d32f2f; font-size:1.5rem;"></i> Urrban League Riverscape Brochure.pdf
+            </a>
           </div>
         </div>
       </div>
