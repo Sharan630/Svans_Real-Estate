@@ -15,7 +15,6 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/style.css">
   
-  <!-- Removed old conflicting <style> block -->
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
   <!-- Social Bar -->
@@ -402,8 +401,6 @@
   const dots = document.querySelectorAll('.portfolio-dot');
   let cardsPerView = window.innerWidth <= 900 ? 1 : 2;
   let currentIndex = 0;
-  let autoSlideInterval;
-  let isUserInteracting = false;
 
   function updateCardsPerView() {
     cardsPerView = window.innerWidth <= 900 ? 1 : 2;
@@ -430,25 +427,11 @@
     updateSlider();
   }
 
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(slideNext, 4000);
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-  }
-
   leftArrow.addEventListener('click', function() {
-    stopAutoSlide();
     slidePrev();
-    isUserInteracting = true;
-    setTimeout(() => { isUserInteracting = false; startAutoSlide(); }, 6000);
   });
   rightArrow.addEventListener('click', function() {
-    stopAutoSlide();
     slideNext();
-    isUserInteracting = true;
-    setTimeout(() => { isUserInteracting = false; startAutoSlide(); }, 6000);
   });
 
   window.addEventListener('resize', function() {
@@ -460,7 +443,6 @@
 
   updateCardsPerView();
   updateSlider();
-  startAutoSlide();
 })();
 </script>
 </html> 
