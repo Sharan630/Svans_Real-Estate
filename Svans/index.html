@@ -136,39 +136,41 @@
     <div class="container">
       <div class="portfolio-header" style="text-align:center; margin-bottom:2rem;">
         <h2>Portfolio</h2>
-        <!-- Removed upload area -->
+        
       </div>
       <!-- PDF Slider for Portfolio -->
-      <div id="pdfList" class="pdf-slider-container">
-        <div class="pdf-card" onclick="window.open('assets/pdfs/SageBrochure_web.pdf','_blank')">
-          <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Luxury Villa">
-          <div class="pdf-title">SageBrochure_web.pdf</div>
-          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-        </div>
-        <div class="pdf-card" onclick="window.open('assets/pdfs/Villa Living.pdf','_blank')">
-          <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=400&q=80" alt="Modern Mansion">
-          <div class="pdf-title">Villa Living.pdf</div>
-          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-        </div>
-        <div class="pdf-card" onclick="window.open('assets/pdfs/The Promenade.pdf','_blank')">
-          <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Luxury Apartment">
-          <div class="pdf-title">The Promenade.pdf</div>
-          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-        </div>
-        <div class="pdf-card" onclick="window.open('assets/pdfs/SAS_Crown_Handy_Brochure__4_ (1).pdf','_blank')">
-          <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80" alt="Luxury Tower">
-          <div class="pdf-title">SAS_Crown_Handy_Brochure__4_ (1).pdf</div>
-          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-        </div>
-        <div class="pdf-card" onclick="window.open('assets/pdfs/Rainbow Waters.pdf','_blank')">
-          <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Luxury Pool Villa">
-          <div class="pdf-title">Rainbow Waters.pdf</div>
-          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
-        </div>
-        <div class="pdf-card" onclick="window.open('assets/pdfs/Urrban League Riverscape Brochure.pdf','_blank')">
-          <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Luxury Riverside">
-          <div class="pdf-title">Urrban League Riverscape Brochure.pdf</div>
-          <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
+      <div class="portfolio-slider">
+        <div class="portfolio-track">
+          <div class="pdf-card" onclick="window.open('assets/pdfs/SageBrochure_web.pdf','_blank')">
+            <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Luxury Villa">
+            <div class="pdf-title">SageBrochure_web.pdf</div>
+            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
+          </div>
+          <div class="pdf-card" onclick="window.open('assets/pdfs/Villa Living.pdf','_blank')">
+            <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=400&q=80" alt="Modern Mansion">
+            <div class="pdf-title">Villa Living.pdf</div>
+            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
+          </div>
+          <div class="pdf-card" onclick="window.open('assets/pdfs/The Promenade.pdf','_blank')">
+            <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Luxury Apartment">
+            <div class="pdf-title">The Promenade.pdf</div>
+            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
+          </div>
+          <div class="pdf-card" onclick="window.open('assets/pdfs/SAS_Crown_Handy_Brochure__4_ (1).pdf','_blank')">
+            <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80" alt="Luxury Tower">
+            <div class="pdf-title">SAS_Crown_Handy_Brochure__4_ (1).pdf</div>
+            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
+          </div>
+          <div class="pdf-card" onclick="window.open('assets/pdfs/Rainbow Waters.pdf','_blank')">
+            <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Luxury Pool Villa">
+            <div class="pdf-title">Rainbow Waters.pdf</div>
+            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
+          </div>
+          <div class="pdf-card" onclick="window.open('assets/pdfs/Urrban League Riverscape Brochure.pdf','_blank')">
+            <img class="pdf-thumbnail" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Luxury Riverside">
+            <div class="pdf-title">Urrban League Riverscape Brochure.pdf</div>
+            <div class="pdf-open"><i class="fas fa-file-pdf"></i> Open PDF</div>
+          </div>
         </div>
       </div>
     </div>
@@ -376,4 +378,24 @@
     AOS.init({ once: true, duration: 900 });
   </script>
 </body>
+<script>
+// Portfolio slider logic
+(function() {
+  const track = document.querySelector('.portfolio-track');
+  const cards = document.querySelectorAll('.portfolio-track .pdf-card');
+  const cardsPerView = 2;
+  let currentIndex = 0;
+  function slidePortfolio() {
+    currentIndex += cardsPerView;
+    if (currentIndex >= cards.length) currentIndex = 0;
+    track.style.transform = `translateX(-${currentIndex * (100 / cardsPerView)}%)`;
+  }
+  // Set widths for smooth sliding
+  track.style.width = `${(cards.length / cardsPerView) * 100}%`;
+  cards.forEach(card => {
+    card.style.width = `${100 / cards.length}%`;
+  });
+  setInterval(slidePortfolio, 4000);
+})();
+</script>
 </html> 

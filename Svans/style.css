@@ -581,11 +581,7 @@ h2::after {
 
 /* Portfolio PDF Card Animation */
 .pdf-slider-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 2rem;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
+  display: none !important;
 }
 .pdf-card {
   min-width: 220px;
@@ -642,5 +638,35 @@ h2::after {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+} 
+
+/* Portfolio Slider Styles */
+.portfolio-slider {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 2rem auto;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  will-change: transform;
+}
+.portfolio-track .pdf-card {
+  min-width: 50%;
+  max-width: 50%;
+  flex: 0 0 50%;
+  margin-right: 0;
+}
+@media (max-width: 700px) {
+  .portfolio-slider {
+    max-width: 98vw;
+  }
+  .portfolio-track .pdf-card {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
   }
 } 
