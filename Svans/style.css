@@ -754,3 +754,125 @@ h2::after {
     padding: 0.7rem 0.7rem 1rem 0.7rem;
   }
 } 
+
+/* --- MOBILE IMPROVEMENTS FOR TESTIMONIALS, BLOG, CONTACT, CTA --- */
+@media (max-width: 767.98px) {
+  /* Testimonials Section */
+  .testimonials-section {
+    padding: 1.5rem 0.5rem;
+  }
+  .testimonial-card {
+    padding: 1.2rem 0.7rem;
+    border-radius: 1.1rem;
+    text-align: center;
+  }
+  .testimonial-img {
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.7rem;
+  }
+  .carousel-inner {
+    padding-bottom: 1.2rem;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 45%;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* Blog Section */
+  .blog-section {
+    padding: 1.5rem 0.5rem;
+  }
+  .blog-card {
+    margin-bottom: 1.2rem;
+    border-radius: 1.1rem;
+    box-shadow: var(--shadow);
+  }
+  .blog-card .card-img-top {
+    height: 140px;
+    object-fit: cover;
+    border-radius: 1.1rem 1.1rem 0 0;
+  }
+  .blog-card .card-title {
+    font-size: 1.1rem;
+  }
+  .blog-card .card-text {
+    font-size: 0.98rem;
+  }
+  .blog-section .row {
+    flex-direction: column;
+  }
+  .blog-section .col-md-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 1.5rem 0.5rem;
+  }
+  .contact-section .row {
+    flex-direction: column;
+  }
+  .contact-section .col-lg-7, .contact-section .col-lg-5 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 1.2rem;
+  }
+  .contact-section form {
+    padding: 1.2rem 0.7rem;
+    border-radius: 1.1rem;
+  }
+  .contact-section label, .contact-section input, .contact-section textarea {
+    font-size: 1rem;
+  }
+  .contact-section .img-fluid {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1.1rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    text-align: center;
+  }
+  .cta-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .cta-section .btn {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 1.2rem;
+  }
+
+  /* General touch targets and spacing */
+  .btn, .btn-view, .btn-contact, .download-btn {
+    min-height: 44px;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  input, textarea {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+}
+
+/* Slightly larger text for mobile luxury feel */
+@media (max-width: 480px) {
+  body, .about-content, .service-card, .portfolio-item, .testimonial-card, .blog-card, .contact-section form {
+    font-size: 1.05rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+} 
