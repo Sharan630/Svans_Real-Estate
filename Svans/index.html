@@ -415,15 +415,23 @@
   }
 
   function slideNext() {
-    currentIndex += cardsPerView;
-    if (currentIndex >= cards.length) currentIndex = 0;
+    if (currentIndex + cardsPerView >= cards.length) {
+      currentIndex = 0; // Loop to first
+    } else {
+      currentIndex += cardsPerView;
+    }
     updateSlider();
   }
 
   function slidePrev() {
-    currentIndex -= cardsPerView;
-    if (currentIndex < 0) currentIndex = cards.length - cardsPerView;
-    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex === 0) {
+      // Loop to last full set
+      currentIndex = cards.length - cardsPerView;
+      if (currentIndex < 0) currentIndex = 0;
+    } else {
+      currentIndex -= cardsPerView;
+      if (currentIndex < 0) currentIndex = 0;
+    }
     updateSlider();
   }
 
@@ -436,11 +444,13 @@
 
   window.addEventListener('resize', function() {
     updateCardsPerView();
-    // Snap to start if resizing
+    // Always snap to first card on resize
     currentIndex = 0;
     updateSlider();
   });
 
+  // Always start at first PDF
+  currentIndex = 0;
   updateCardsPerView();
   updateSlider();
 })();
