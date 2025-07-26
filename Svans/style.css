@@ -102,13 +102,27 @@ body {
 }
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 4.2rem;
+  font-size: 5.5rem;
   font-weight: 900;
-  color: #2c3e50;
-  letter-spacing: 0.08em;
-  text-shadow: 0 8px 32px rgba(0,0,0,0.15);
-  margin-bottom: 0.7rem;
+  color: #fff;
+  letter-spacing: 0.12em;
+  text-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 4px 16px rgba(135, 206, 235, 0.3);
+  margin-bottom: 1.2rem;
   text-transform: uppercase;
+  background: linear-gradient(135deg, #fff 0%, #f0f8ff 50%, #e6f3ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 4px 16px rgba(135, 206, 235, 0.3);
+  }
+  to {
+    text-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 4px 16px rgba(135, 206, 235, 0.6), 0 0 20px rgba(135, 206, 235, 0.4);
+  }
 }
 .hero-hashtags {
   display: flex;
@@ -207,10 +221,7 @@ h2::after {
     border-radius: 0 0 1.2rem 1.2rem;
   }
   .hero-title {
-    font-size: 2.2rem;
-  }
-  .association-logos img {
-    height: 32px;
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 767.98px) {
