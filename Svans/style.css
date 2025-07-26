@@ -223,8 +223,50 @@ h2::after {
   .hero-title {
     font-size: 3.5rem;
   }
+  .hero-hashtags {
+    gap: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .hero-hashtags span {
+    padding: 0.25rem 1rem;
+  }
+  .hero-content {
+    padding-bottom: 3rem;
+  }
 }
 @media (max-width: 767.98px) {
+  .hero-section {
+    min-height: 80vh;
+    border-radius: 0;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.4), 0 2px 8px rgba(135, 206, 235, 0.3);
+  }
+  
+  .hero-hashtags {
+    gap: 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-hashtags span {
+    padding: 0.2rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+  }
+  
+  .hero-content {
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
   .social-bar {
     top: unset;
     bottom: 10vh;
@@ -232,6 +274,7 @@ h2::after {
     flex-direction: row;
     gap: 0.7rem;
   }
+  
   .association-logos {
     right: 1vw;
     bottom: 1vh;
@@ -1291,5 +1334,45 @@ h2::after {
     font-size: 1.5rem;
     bottom: 1.5rem;
     right: 1.5rem;
+  }
+} 
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 70vh;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-hashtags {
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+  }
+  
+  .hero-hashtags span {
+    padding: 0.15rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 0.8rem;
+  }
+  
+  .hero-content {
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .social-bar {
+    bottom: 8vh;
+    left: 0.5vw;
+  }
+  
+  .association-logos {
+    right: 0.5vw;
+    bottom: 0.5vh;
   }
 } 
